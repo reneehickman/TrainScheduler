@@ -8,32 +8,36 @@
     <title>Train Scheduler</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|EB+Garamond" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
 
     <div class="container-fluid" id="header">
-        <div class="row">
+        <div class="row" id="title">
             <div class="col-sm-12 px-0">
-                <h1>Train Scheduler</h1>
-                <h3>Anytime is Train Time</h3>
+
+                <div class="container titleImg"><img src="assets\images\title2.png" width="100%" alt="Hogwarts Express header img"></div>
+
+                <!-- <h1>Train Scheduler</h1> -->
+                <!-- <h3>Anytime is Train Time</h3> -->
 
             </div>
         </div>
     </div>
 
     <div class="container contentContainer">
-        <!--holds all content for search parameters box-->
+        <!--holds all content for current train schedule-->
 
         <div class="row">
             <div class="col-sm-12 p-0">
 
-                <h5>Current Employees</h5>
-                <!--Seach parameters title header-->
+                <h5>Current Train Schedule</h5>
+                <!--current traun title header-->
 
                 <div class="insideContainer">
-                    <!--holds content within the searh parameters container-->
+                    <!--holds dynamic content within the current train schedule table-->
 
                     <table class="table table-hover" id="table">
                         <thead>
@@ -56,8 +60,8 @@
 
     </div>
 
-    <div class="container contentContainer addEmployee">
-        <!--holds all content for top articles box-->
+    <div class="container contentContainer">
+        <!--holds all content for add train container-->
 
         <div class="row">
             <div class="col-sm-12 p-0">
@@ -66,28 +70,28 @@
                 <!--Top articles title header-->
 
                 <div class="insideContainer">
-                    <!--holds content within the top articles container-->
+                    <!--holds content within the add train form-->
 
                     <form>
                         <div class="form-group">
-                            <label for="searchTerm">Train Name</label>
-                            <input type="text" class="form-control" name="Employee Name" id="employeeNameForm">
-                            <!--search term label and input-->
+                            <label for="trainName">Train Name</label>
+                            <input type="text" class="form-control" name="Train Name" id="trainNameForm" placeholder="Train Name">
+                            <!--train name label and input-->
                         </div>
                         <div class="form-group">
-                            <label for="recordsNumber">Destination</label>
-                            <input type="text" class="form-control" name="Role" id="employeeRoleForm">
-                            <!--records number label and input-->
+                            <label for="destination">Destination</label>
+                            <input type="text" class="form-control" name="Destination" id="trainDestinationForm" placeholder="Destination">
+                            <!--destination label and input-->
                         </div>
                         <div class="form-group">
-                            <label for="startYear">First Train Time (HH:mm - military time)</label>
-                            <input type="text" class="form-control" name="Start Date" id="employeeStartDateForm">
-                            <!--start year label and input-->
+                            <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
+                            <input type="text" class="form-control" name="First Train Time" id="firstTrainTimeForm" placeholder="HH:mm - military time">
+                            <!--first train time label and input-->
                         </div>
                         <div class="form-group">
-                            <label for="endYear">Frequency (min)</label>
-                            <input type="text" class="form-control" name="Monthly Rate" id="employeeMonthlyRateForm">
-                            <!--end year label and input-->
+                            <label for="frequency">Frequency (min)</label>
+                            <input type="text" class="form-control" name="Frequency" id="frequencyForm" placeholder="Frequency (min)">
+                            <!--frequency label and input-->
                         </div>
 
                         <button class="btn btn-secondary" id="submitButton" type="submit">Submit</button>
@@ -105,13 +109,13 @@
 
     <div class="container-fluid footer">
         <div class="container">
-            <footer class="text-white text-center mt-3">Copyright&copy;</footer>
+            <footer class="text-white text-center mt-5">Copyright&copy;</footer>
         </div>
     </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>  -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> 
     <script src="./assets/javascript/moment.js"></script>    
     <script src="./assets/javascript/js.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
