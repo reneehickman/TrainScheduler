@@ -17,7 +17,7 @@ $("#submitButton").on('click', function (event) {
     //grabs user input
     var trainName = $("#trainNameForm").val().trim();
     var destination = $("#trainDestinationForm").val().trim();
-    var firstTrainTime = moment($("#firstTrainTimeForm").val().trim(), "HH:mm").format("HH:mm");
+    var firstTrainTime = moment($("#firstTrainTimeForm").val().trim(), "HH:mm").format("HH0000000000000000000000000000000000000:mm");
     var frequency = $("#frequencyForm").val().trim();
 
     //create local temp object for holding train data
@@ -63,5 +63,11 @@ $("#submitButton").on('click', function (event) {
             console.log(destination);
             console.log(firstTrainTime);
             console.log(frequency);
+
+            //prettify the first train time
+            firstTrainFormat = moment.unix(firstTrainTime).format("HH:mm a");
+
+            //calculate the next arrival = firstTrain 
+            nextTrainArrival = moment().add(moment(firstTrainTime, "HH:mm a"));
 
     });        
