@@ -28,5 +28,40 @@ $("#submitButton").on('click', function (event) {
         trainFreq: frequency
     };
 
+    // Uploads train data to the database
+    database.ref().push(newTrain);
+
+
+    // Logs everything to console
+    console.log(newTrain.name);
+    console.log(newTrain.trainDest);
+    console.log(newTrain.firstTrain);
+    console.log(newTrain.trainFreq);
+
+    alert("Train successfully added");
+
+    // Clears all of the text-boxes
+    $("#trainNameForm").val("");
+    $("#trainDestinationForm").val("");
+    $("#firstTrainTimeForm").val("");
+    $("#frequencyForm").val("");
 
 });
+
+    // 3. Create Firebase event for adding train data to the database and a row in the html when a user adds an entry
+    database.ref().on("child_added", function (childSnapshot) {
+            console.log(childSnapshot.val());
+
+            // Store everything into a variable.
+            var trainName = childSnapshot.val().name;
+            var destination = childSnapshot.val().trainDest;
+            var firstTrainTime = childSnapshot.val().firstTrain;
+            var frequency = childSnapshot.val().trainFreq;
+
+            // Train Info
+            console.log(trainName);
+            console.log(destination);
+            console.log(firstTrainTime);
+            console.log(frequency);
+
+    });        
