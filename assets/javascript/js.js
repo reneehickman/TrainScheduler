@@ -1,3 +1,32 @@
+// //test
+// var rate = 30;
+// var time = "16:55";
+// var start = moment(time, "HH:mm").format("hh:mm A");
+
+// console.log("First Time: " + start);
+
+// //123 var pretty= moment(start).format("hh:mm A")
+// //123 console.log("First Time pretty: " + pretty);
+
+// var diff = moment().diff(moment(start, "hh:mm"), "minutes");
+// console.log("Difference in time: " + diff);
+
+// var remainder = diff % rate;
+// console.log("Remainder: " + remainder);
+
+// var minAway = rate - remainder;
+// console.log("Minutes Away: " + minAway + " minutes");
+
+// //123 var nextTrain = moment().add(minAway, "minutes");
+// //123 console.log("Next Arrival: " + moment(nextTrain).format("hh:mm A"));
+
+// var nextTrain = moment().add(minAway, "minutes").format("hh:mm A");
+// console.log("Next Arrival: " + nextTrain);
+
+//123 nextArrival = moment(nextTrain).format("hh:mm A");
+//123 console.log("Next Arrival: " + nextArrival);
+
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCuaAUbIPEquvPkwfFin3SAJiLjFk9aegU",
@@ -17,7 +46,7 @@ $("#submitButton").on('click', function (event) {
     //grabs user input
     var trainName = $("#trainNameForm").val().trim();
     var destination = $("#trainDestinationForm").val().trim();
-    var firstTrainTime = moment($("#firstTrainTimeForm").val().trim(), "HH:mm").format("HH0000000000000000000000000000000000000:mm");
+    var firstTrainTime = moment($("#firstTrainTimeForm").val().trim(), "HH:mm").format("hh:mm A");
     var frequency = $("#frequencyForm").val().trim();
 
     //create local temp object for holding train data
@@ -64,10 +93,10 @@ $("#submitButton").on('click', function (event) {
             console.log(firstTrainTime);
             console.log(frequency);
 
-            //prettify the first train time
-            firstTrainFormat = moment.unix(firstTrainTime).format("HH:mm a");
+            // //prettify the first train time
+            // firstTrainFormat = moment.unix(firstTrainTime).format("HH:mm a");
 
-            //calculate the next arrival = firstTrain 
-            nextTrainArrival = moment().add(moment(firstTrainTime, "HH:mm a"));
+            // //calculate the next arrival = firstTrain 
+            // nextTrainArrival = moment().add(moment(firstTrainTime, "HH:mm a"));
 
     });        
