@@ -8,10 +8,10 @@ Train Scheduler, with a hogwarts twist, is an application that incorporates Fire
 https://reneehickman.github.io/TrainScheduler/
 
 ### Languages/Libraries/Platforms used:
-HTML5
-CSS3
-JavaScript
-Bootstrap Framework
-jQuery
-Firebase Database
-Moment.js
+- HTML5
+- CSS
+- JavaScript
+- Bootstrap Framework
+- jQuery
+- Firebase Database
+- Moment.js
