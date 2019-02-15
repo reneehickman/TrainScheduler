@@ -4,7 +4,7 @@ Train Scheduler, with a hogwarts twist, is an application that incorporates Fire
 
 https://reneehickman.github.io/TrainScheduler/
 
-![Preview of Hogwarts Express Train Scheduler](https://github.com/reneehickman/TrainScheduler/blob/master/assets/images/44.JPG)
+![ScreenShot](/assets/images/44.JPG)
 
 ### Languages/Libraries/Platforms used:
 - HTML5
