@@ -14,3 +14,5 @@ https://reneehickman.github.io/TrainScheduler/
 - jQuery
 - Firebase Database
 - Moment.js
+- Photoshop
+- Illustrator
